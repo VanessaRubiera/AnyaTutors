@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnyaTutors</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" type="text/css" href="/AnyaTutors/css/styl.css"> 
+    <title>AnyaTutors | Bienvenido</title>
 </head>
 <body>
-    <h1>Anya Tutors</h1>
+    <header>
+        <a href="#" class="logo">AnyaTutors</a>
+    </header>
+    <section>
+        <img src="stars.png" id="starts">
+        <img src="Moon2.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Bienvenidos</h2>
+        <a href="#" class="btn" id="bt">Registrarse</a>
+        <a href="#" class="btn" id="bt2">Iniciar sesion</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Sobre nosotros</h2>
+        <p>...</p>
+    </div>
+    
+    <script>
+        let starts = document.getElementById('starts');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let bt = document.getElementById('bt');
+        let mountains_front = document.getElementById('mountains_front');
+        
+        window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+        starts.style.left= value * 0.25 + 'px';
+        moon.style.top= value * 1.5 + 'px';
+        mountains_behind.style.top= value * 05 + 'px';
+        mountains_front.style.top= value * 0 + 'px';
+        text.style.marginLeft= value * 6 + 'px';
+        text.style.marginTop= value * 1.5 + 'px';
+        bt.style.marginTop= value * 1.5+ 'px';
+        bt2.style.marginTop= value * 1.5+ 'px';
+        }); 
+    </script>  
 </body>
 </html>
